@@ -1,25 +1,137 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Park Pilates</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 2rem; }
-    nav a { margin: 0 1rem; text-decoration: none; color: #333; }
-    .socials a { margin: 0 0.5rem; }
+    :root {
+      --sage-green: #8A9A5B;
+      --soft-black: #333333;
+      --warm-cream: #F5F2E7;
+      --muted-taupe: #A39887;
+      --white: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--warm-cream);
+      color: var(--soft-black);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    header {
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 2.5rem;
+      margin-bottom: 0.25rem;
+      color: var(--sage-green);
+    }
+
+    nav {
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--sage-green);
+      font-weight: 600;
+      margin: 0 1rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a:focus {
+      background-color: var(--sage-green);
+      color: var(--white);
+      outline: none;
+    }
+
+    p.lead {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      color: var(--muted-taupe);
+    }
+
+    .socials a {
+      color: var(--sage-green);
+      text-decoration: none;
+      margin: 0 0.75rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .socials a:hover,
+    .socials a:focus {
+      color: var(--soft-black);
+      outline: none;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      color: var(--muted-taupe);
+    }
+
+    @media (max-width: 480px) {
+      nav a {
+        margin: 0 0.5rem;
+        font-size: 0.9rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p.lead {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome to Park Pilates</h1>
-  <nav>
-    <a href="about.html">About</a>
-    <a href="book.html">Book a Class</a>
-  </nav>
-  <p>Movement in the sunshine, connection in the park.</p>
-  <div class="socials">
-    <a href="https://instagram.com/parkpilatessf" target="_blank">Instagram</a>
-    <a href="https://tiktok.com/@parkpilatessf" target="_blank">TikTok</a>
-  </div>
+  <header>
+    <h1>Park Pilates</h1>
+    <nav role="navigation" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="book.html">Book a Class</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="lead">Movement in the sunshine, connection in the park.</p>
+
+    <section class="socials" aria-label="Social media links">
+      <a href="https://instagram.com/parkpilatessf" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+      <a href="https://tiktok.com/@parkpilatessf" target="_blank" rel="noopener noreferrer" aria-label="TikTok">TikTok</a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Park Pilates — San Francisco, CA
+  </footer>
 </body>
 </html>
+
