@@ -2,92 +2,78 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Outdoor Pilates classes in Golden Gate Park, SF">
-  <title>Park Pilates SF</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Park Pilates</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 
 <body>
-  <header class="header">
-    <div class="container">
-      <img src="images/logo.jpg" alt="Park Pilates Logo" class="logo">
-      <nav class="nav" id="nav-menu">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#classes">Classes</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="assets/logo.png" alt="Park Pilates Logo" class="logo" />
+        <h1>Park Pilates</h1>
+      </div>
       <div class="hamburger" id="hamburger">
         <span></span>
         <span></span>
         <span></span>
       </div>
-    </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h1>Welcome to Park Pilates SF</h1>
-        <p>Outdoor mat Pilates classes in Golden Gate Park for all levels.</p>
-      </div>
-    </section>
+  <section class="hero">
+    <h2>Outdoor Pilates for All Levels</h2>
+    <p>Join our energizing sessions in the heart of Golden Gate Park.</p>
+    <a href="#classes" class="btn">View Classes</a>
+  </section>
 
-    <section id="about" class="section">
-      <div class="container">
-        <h2>About</h2>
-        <p>Park Pilates SF offers 45-minute mat Pilates classes focused on core stability and mindful movement. All levels welcome. Taught by certified instructors in the heart of Golden Gate Park.</p>
-      </div>
-    </section>
-
-    <section id="classes" class="section">
-      <div class="container">
-        <h2>Classes</h2>
-        <ul>
-          <li>🗓 Fridays at 6PM</li>
-          <li>📍 Near the Love Blocks, Golden Gate Park</li>
-          <li>💪 45 min all-levels mat class</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="reviews" class="section">
-      <div class="container">
-        <h2>Reviews</h2>
-        <blockquote>“Such a beautiful and energizing way to end my week. Sarah is amazing!” – M.T.</blockquote>
-        <blockquote>“I always feel stronger and more centered after class.” – J.L.</blockquote>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>Follow us on Instagram: <a href="https://instagram.com/parkpilatessf" target="_blank">@parkpilatessf</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
+  <section id="about" class="section">
     <div class="container">
-      <p>&copy; 2025 Park Pilates SF. All rights reserved.</p>
+      <h2>About Park Pilates</h2>
+      <p>Park Pilates offers all-level mat classes focused on core stability, alignment, and joy of movement in nature.</p>
+    </div>
+  </section>
+
+  <section id="reviews" class="section">
+    <div class="container">
+      <h2>What Clients Say</h2>
+      <div class="reviews">
+        <div class="review">
+          <p>"A rejuvenating experience! Sarah is a wonderful instructor who brings warmth and precision to every class."</p>
+          <strong>- Emma R.</strong>
+        </div>
+        <div class="review">
+          <p>"Perfect way to end the week. The park setting is so peaceful and the class is always challenging in the best way."</p>
+          <strong>- Jason M.</strong>
+        </div>
+        <div class="review">
+          <p>"My core has never been stronger! I love that this is for all levels — it's both supportive and empowering."</p>
+          <strong>- Kelly T.</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-content">
+      <p>&copy; 2025 Park Pilates. All rights reserved.</p>
+      <div class="socials">
+        <a href="#"><img src="assets/instagram-icon.svg" alt="Instagram"></a>
+        <a href="#"><img src="assets/facebook-icon.svg" alt="Facebook"></a>
+      </div>
     </div>
   </footer>
-
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('nav-menu');
-
-    hamburger.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-  </script>
 </body>
 
 </html>
