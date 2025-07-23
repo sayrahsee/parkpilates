@@ -1,79 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Park Pilates</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Park Pilates SF</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
-  <header>
-    <nav class="navbar">
-      <div class="logo-container">
-        <img src="assets/logo.png" alt="Park Pilates Logo" class="logo" />
-        <h1>Park Pilates</h1>
-      </div>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="#classes">Classes</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+<body class="bg-white text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="assets/images/logo.png" alt="Park Pilates Logo" class="h-10 w-auto">
+        <span class="text-xl font-semibold">Park Pilates</span>
+      </a>
+
+      <!-- Nav -->
+      <nav class="space-x-6 hidden md:flex text-sm font-medium">
+        <a href="index.html" class="hover:text-black">Home</a>
+        <a href="about.html" class="hover:text-black">About</a>
+        <a href="contact.html" class="hover:text-black">Contact</a>
+      </nav>
+
+      <!-- Hamburger (Mobile) -->
+      <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2">
+      <a href="index.html" class="block">Home</a>
+      <a href="about.html" class="block">About</a>
+      <a href="contact.html" class="block">Contact</a>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>Outdoor Pilates for All Levels</h2>
-    <p>Join our energizing sessions in the heart of Golden Gate Park.</p>
-    <a href="#classes" class="btn">View Classes</a>
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-6">
+    <h1 class="text-4xl font-bold mb-4">Welcome to Park Pilates</h1>
+    <p class="text-lg text-gray-600">Outdoor movement. Real community. Stronger together.</p>
   </section>
 
-  <section id="about" class="section">
-    <div class="container">
-      <h2>About Park Pilates</h2>
-      <p>Park Pilates offers all-level mat classes focused on core stability, alignment, and joy of movement in nature.</p>
-    </div>
-  </section>
-
-  <section id="reviews" class="section">
-    <div class="container">
-      <h2>What Clients Say</h2>
-      <div class="reviews">
-        <div class="review">
-          <p>"A rejuvenating experience! Sarah is a wonderful instructor who brings warmth and precision to every class."</p>
-          <strong>- Emma R.</strong>
-        </div>
-        <div class="review">
-          <p>"Perfect way to end the week. The park setting is so peaceful and the class is always challenging in the best way."</p>
-          <strong>- Jason M.</strong>
-        </div>
-        <div class="review">
-          <p>"My core has never been stronger! I love that this is for all levels — it's both supportive and empowering."</p>
-          <strong>- Kelly T.</strong>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container footer-content">
-      <p>&copy; 2025 Park Pilates. All rights reserved.</p>
-      <div class="socials">
-        <a href="#"><img src="assets/instagram-icon.svg" alt="Instagram"></a>
-        <a href="#"><img src="assets/facebook-icon.svg" alt="Facebook"></a>
-      </div>
-    </div>
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center py-4 text-sm text-gray-500">
+    &copy; 2025 Park Pilates SF. All rights reserved.
   </footer>
-</body>
 
+  <!-- JS for mobile menu toggle -->
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+
+</body>
 </html>
